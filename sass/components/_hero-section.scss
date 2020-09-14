@@ -1,0 +1,38 @@
+.hero {
+    background-color: #C4C4C4;
+}
+
+.hero__container {
+    width: 1600px;
+    height: 600px;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding: 200px 452px;
+
+    background-color: #C4C4C4;
+    background-image: url(../images/hero/hero.jpg);
+}
+
+.hero__title {
+    margin-bottom: 30px;
+
+    color: $secondary-text-color;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero__link {
+    @extend %button;
+    display: block;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    text-decoration: none;
+    text-align: center;
+}

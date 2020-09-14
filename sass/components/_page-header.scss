@@ -1,0 +1,112 @@
+.container-header {
+    @extend %container;
+    display: flex;
+    align-items: center;
+}
+
+.logo--header {
+    margin-right: 93px;
+}
+
+.logo__accent {
+    color: $accent-color;
+}
+
+//----------------------------------
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__site {
+    display: flex;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav__link {
+    position: relative;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 100%;
+
+    color: $black-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms $transition-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.nav__link--current {
+    color: $accent-color;
+
+    &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-color;
+    border-radius: 2px;
+    }
+}
+
+.nav__contact {
+    display: flex;
+    margin-left: auto;
+}
+
+//----------------------------------
+
+.contact__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $primary-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms $transition-function;
+
+    &:first-child {
+        margin-right: 50px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;       
+    }
+}
+
+.contact__icon {
+    fill: $primary-text-color;
+    margin-right: 10px;
+
+    transition: fill 250ms $transition-function;
+
+    .contact__link:hover &,
+    .contact__link:focus & {
+        fill: $accent-color;
+    }
+}
